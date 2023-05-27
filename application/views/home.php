@@ -60,8 +60,8 @@
                             </span>
                         </div>
                         <div class="text-center">
-                            <input type="radio" name="renter" value="renter">&nbsp;Renter</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="radio" name="owner" value="owner">&nbsp;Owner</label>
+                            <input type="radio" name="user_type" value="renter">&nbsp;Renter</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="user_type" value="owner">&nbsp;Owner</label>
                         </div>
                         <div class="container-login100-form-btn">
                             <button class="login100-form-btn">

@@ -70,7 +70,7 @@ class Welcome extends CI_Controller {
     public function login() {
         $email = $this->input->post('email', true);
         $password = $this->input->post('password', true);
-        if($this->input->post('owner')=="owner"){
+        if($this->input->post('user_type')=="owner"){
             $result = $this->welcome_model->login_info($email);
 //        echo '<pre>';
 //        print_r($result);
@@ -88,7 +88,7 @@ class Welcome extends CI_Controller {
                 redirect(base_url());
             }
         }
-        else if($this->input->post('renter')=="renter"){
+        else if($this->input->post('user_type')=="renter"){
             $result = $this->welcome_model->login_info2($email);
             if (password_verify($password, $result->password)) {
                 $sdata = array();
@@ -166,7 +166,7 @@ class Welcome extends CI_Controller {
     }
     function image_upload($image_file) {
         $config['upload_path'] = './resource/images/';
-        $config['allowed_types'] = 'gif|jpg|png';
+        $config['allowed_types'] = 'gif|jpg|jpeg|png';
         $config['max_size'] = 10000000;
         $config['max_width'] = 10000000;
         $config['max_height'] = 768000;
